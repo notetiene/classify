@@ -43,3 +43,9 @@ To **set the value** of a CSS property, the `setProperty` method is used:
 // the display property now is 'inline'
 var status = parser.setProperty('display', 'inline');
 ```
+
+## FAQ
+Q. Why reinvent the wheel? There are already many frameworks like jQuery that are fast and simpler!
+
+A. Although many frameworks exist, most of them are too hungry for what they do. The jQuery selector is at least 2x slower than the native one. Most DOM operations can be done in pure JavaScript with better browser compatibility. Frameworks may be good for productivity, but becomes bloatware with time.
+Furthermore, this library was created to teach JavaScript usage without frameworks.
