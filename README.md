@@ -1,11 +1,13 @@
-# classify
-The classify JavaScript library consist of functions that interact with HTMLElement and a CSS parser.
+# Classify
+The Classify JavaScript library consist of functions that interact with HTMLElement and a little CSS parser.
 
 ## Core
-The first part consists of operations on `HTMLElement`. For simplicity, the library let the user choose their own `HTMLElement` selectors.
+The core consists of operations on `HTMLElement`s. For simplicity, the library let the user choose their own `HTMLElement` selectors.
+
+Since the original goal of Classify was to make operations on the class attribute, much of its components are about class manipulation. Next features would be certainly about other kinds of manipulations.
 
 ## ParseCSS
-The second part of the library consists of a CSS properties parser ("`CSSParser`"). The passed String is usually a `CSSStyleDeclaration` (style attribute). It allows to find a property value, set a property and remove a property.
+The second part of the library consists of a CSS properties parser (“`CSSParser`”). The passed String is usually a `CSSStyleDeclaration` (style attribute). It gives functions to find a property value, set a property and remove a property.
 
 ### Usage
 Given a CSS property list:
