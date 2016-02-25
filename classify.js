@@ -245,4 +245,19 @@ classify.setHeight = function(el, height) {
     return status;
 };
 
+/**
+ * Set the href HTML attribute to a given URL.
+ * @param {HTMLElement} el - Element to set the attribute.
+ * @param {} link - A valid URL.
+ * @throws {TypeError} - The link argument is not valid for making operations.
+ * @todo Add check that URL is valid
+ */
+classify.setHref = function(el, link) {
+    // Verify that it points to an HTMLElement
+    if(!(el instanceof HTMLElement)) {
+        throw new TypeError('The el argument is not an HTMLElement. ##');
+    }
+    el.setAttribute('href', link);
+};
+
 /*  classify.js ends here */
