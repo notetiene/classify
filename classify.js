@@ -15,12 +15,12 @@ var classify = classify | {};
  * @private
  * @param {} el - An {@linkcode HTMLElement} (user is responsible for implementing the selector).
  * @param {} htmlClass - A string containing the class to operate on.
- * @throws {TypeError|NotStringError} - The argument are not valid for making operations.
+ * @throws {TypeError|NotStringError} - Arguments are not valid for making operations.
  */
 classify._isValidOperation = function(el, htmlClass) {
-    // Verify that it point to an HTMLElement
+    // Verify that it points to an HTMLElement
     if(!(el instanceof HTMLElement)) {
-        throw new TypeError('The el is argument not an HTMLElement. ##');
+        throw new TypeError('The el argument is not an HTMLElement. ##');
     }
     // Verify that htmlClass is a String
     if(!utils.isString(htmlClass)) {
