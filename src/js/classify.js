@@ -200,6 +200,26 @@ classify.addClass = function(el, htmlClass) {
 };
 
 /**
+ * Remove the class `{@link htmlClass}` from elements containing that class. Since only class name need to be known, the `document.getElementsByClassesName(class)` selector is used. This means the DOM must be loaded to execute that function.
+ * @param {String} htmlClass - The class to remove from all elements.
+ * @returns {int} -1 if the class doesn't exist in the document, else it returns 0.
+ */
+classify.removeClassInstances = function(htmlClass) {
+    var instances = document.getElementsByClassName(htmlClass);
+    // Check that it's null (class not found)
+    if(instances === null) {
+        return -1;
+    }
+
+    // Execute member function on all elements containing the class
+    for(var i=0, len=instances.length; i < len; i++) {
+        this.removeClass(instances[i], htmlClass);
+    }
+
+    return 0;
+};
+
+/**
  * Set the CSS height of an given {@linkcode HTMLElement}.
  * @param {HTMLElement} el - The selected element to set the height (user is responsible for implementing the selector).
  * @param {int|String} height - The height in CSS pixel to set. The px suffix is not necessary.
