@@ -23,7 +23,7 @@ classify._isValidOperation = function(el, htmlClass) {
         throw new TypeError('The el argument is not an HTMLElement. ##');
     }
     // Verify that htmlClass is a String
-    if(!utils.isString(htmlClass)) {
+    if(!typeok.isString(htmlClass)) {
         throw new NotStringError('The htmlClass argument is not a valid String. ##');
     }
 };
