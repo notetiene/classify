@@ -11,7 +11,6 @@ var uglify     = require('gulp-uglify');
 // var clean      = require('gulp-clean'); // Clean
 
 // Paths
-var vendordir  = 'vendor/**/dist/';
 var source     = 'src/';
 var build      = 'dist/';
 var jsdir      = 'js/';
