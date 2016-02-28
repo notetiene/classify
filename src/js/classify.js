@@ -196,7 +196,7 @@ classify.addClass = function(el, htmlClass) {
         throw e;
     }
 
-    return this._hasClass(el, htmlClass);
+    return this._addClass(el, htmlClass);
 };
 
 /**
