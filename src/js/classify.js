@@ -258,7 +258,7 @@ classify.setHeight = function(el, height) {
         parser = new CSSParser(styleAttribute);
         parser.setProperty('height', height);
         styleAttribute = parser.toString();
-        el.setAttribute = styleAttribute;
+        el.setAttribute('style', styleAttribute);
     }
     catch(e) {
         console.log(e.message);
